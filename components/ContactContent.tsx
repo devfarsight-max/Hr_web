@@ -1,27 +1,7 @@
-'use client';
-
-import { useState, type SyntheticEvent } from 'react';
 import Link from 'next/link';
 import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactContent() {
-  const [prepared, setPrepared] = useState(false);
-
-  function prepareEmail(event: SyntheticEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const field = (name: string) => { const value = data.get(name); return typeof value === 'string' ? value.trim() : ''; };
-    const body = [
-      `Name: ${field('name')}`,
-      `Email: ${field('email')}`,
-      `Organisation: ${field('company') || 'Not provided'}`,
-      `Phone: ${field('phone') || 'Not provided'}`,
-      '', field('message'),
-    ].join('\r\n');
-    window.location.href = `mailto:hello@talentbridge.co?subject=${encodeURIComponent(`Enquiry: ${field('topic')}`)}&body=${encodeURIComponent(body)}`;
-    setPrepared(true);
-  }
-
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-10 pt-16 lg:pt-20">
@@ -30,7 +10,7 @@ export default function ContactContent() {
         <p className="mt-6 max-w-2xl text-lg leading-8">A hiring brief, a people challenge or a career move. Tell us what brings you here, and help us understand the support you are looking for.</p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+      <section className="mx-auto max-w-7xl px-6 pb-20">
         <div>
           <div className="divide-y divide-white/15 border-y border-white/15">
             <a href="mailto:hello@talentbridge.co" className="group flex items-center gap-4 py-6"><Mail className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span className="min-w-0"><span className="block text-xs uppercase tracking-widest text-slate-400">Email us</span><span className="mt-2 block break-words text-lg font-semibold group-hover:text-[#61cfcc]">hello@talentbridge.co</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
@@ -39,30 +19,13 @@ export default function ContactContent() {
           </div>
           <div className="mt-9">
             <h2 className="text-2xl">What would you like to discuss?</h2>
-            <dl className="mt-6 space-y-6">
+            <dl className="mt-6 grid gap-6 md:grid-cols-3">
               <div><dt className="font-semibold text-white">Hiring for your organisation</dt><dd className="ml-0 mt-2 text-sm leading-7 text-slate-300">Share the role, key responsibilities, location and your preferred timeline. A draft brief is enough to begin.</dd></div>
               <div><dt className="font-semibold text-white">Strengthening your HR function</dt><dd className="ml-0 mt-2 text-sm leading-7 text-slate-300">Tell us about your team, what is changing and the people processes or leadership challenges you want to address.</dd></div>
               <div><dt className="font-semibold text-white">Exploring a career move</dt><dd className="ml-0 mt-2 text-sm leading-7 text-slate-300">Introduce your experience, interests and preferred location. You can attach your CV when you send your email.</dd></div>
             </dl>
           </div>
         </div>
-
-        <form onSubmit={prepareEmail} className="self-start rounded-2xl p-6 sm:p-9">
-          <p className="eyebrow">YOUR ENQUIRY</p>
-          <h2 className="mt-4 text-3xl">Give us a little context.</h2>
-          <p id="enquiry-help" className="mt-4 text-sm leading-7">Complete the details below to prepare an email. Your email app will open so you can review the message and send it. Fields marked * are required.</p>
-          <div className="mt-7 grid gap-5 sm:grid-cols-2">
-            <label className="text-sm font-semibold" htmlFor="contact-name">Full name *<input id="contact-name" name="name" autoComplete="name" required maxLength={100} className="mt-2 w-full rounded-lg border p-3" /></label>
-            <label className="text-sm font-semibold" htmlFor="contact-email">Email address *<input id="contact-email" name="email" type="email" autoComplete="email" required maxLength={254} className="mt-2 w-full rounded-lg border p-3" /></label>
-            <label className="text-sm font-semibold" htmlFor="contact-company">Organisation <span className="font-normal text-slate-400">(optional)</span><input id="contact-company" name="company" autoComplete="organization" maxLength={150} className="mt-2 w-full rounded-lg border p-3" /></label>
-            <label className="text-sm font-semibold" htmlFor="contact-phone">Phone <span className="font-normal text-slate-400">(optional)</span><input id="contact-phone" name="phone" type="tel" autoComplete="tel" maxLength={40} className="mt-2 w-full rounded-lg border p-3" /></label>
-            <label className="text-sm font-semibold sm:col-span-2" htmlFor="contact-topic">What is your enquiry about? *<select id="contact-topic" name="topic" required defaultValue="" className="mt-2 w-full rounded-lg border p-3"><option value="" disabled>Select a topic</option><option>Recruitment & Executive Search</option><option>HR Consulting</option><option>Leadership Development</option><option>Employee Engagement</option><option>Talent Strategy</option><option>Career Opportunities</option><option>General Enquiry</option></select></label>
-            <label className="text-sm font-semibold sm:col-span-2" htmlFor="contact-message">How can we help? *<textarea id="contact-message" name="message" required rows={5} maxLength={1500} placeholder="Share your goals, the support you need and any important timing." className="mt-2 w-full rounded-lg border p-3" /></label>
-          </div>
-          <button type="submit" aria-describedby="enquiry-help" className="btn mt-6 bg-[#2457A6] text-white">Prepare email <ArrowUpRight size={18} aria-hidden="true" /></button>
-          <p className="mt-4 text-xs leading-6">Prefer to write directly? Email <a className="text-[#61cfcc] underline underline-offset-4" href="mailto:hello@talentbridge.co">hello@talentbridge.co</a>.</p>
-          {prepared && <output className="block mt-5 border-l-2 border-[#61cfcc] pl-4 text-sm leading-7">Your email draft has been requested. Send it from your email app to complete your enquiry. If no app opened, use the email address above and copy your details from this form.</output>}
-        </form>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20">

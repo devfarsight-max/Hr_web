@@ -29,7 +29,7 @@ export default function SiteFooter() {
         <div className="grid gap-x-10 gap-y-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_.7fr_1fr_1fr]">
           <div>
             <Link href="/" aria-label="Orvanta HR Consultancy home" className={`inline-flex rounded-lg ${linkStyle}`}>
-              <img src="/orvanta-logo.jpeg" alt="Orvanta HR Consultancy — Empowering People. Enabling Growth." width={425} height={242} className="h-auto w-56 max-w-full rounded-lg object-contain" loading="lazy" />
+              <img src="/orvanta-logo.png" alt="Orvanta" width={1662} height={946} className="h-auto w-56 max-w-full rounded-lg object-contain" loading="lazy" />
             </Link>
             <p className="mt-6 max-w-xs text-sm leading-7 text-slate-400">Connecting talent, leadership and people strategy to help organisations grow and professionals move forward.</p>
             <Link href="/about" className={`mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#61cfcc] ${linkStyle}`}>Get to know us <ArrowUpRight size={16} aria-hidden="true" /></Link>

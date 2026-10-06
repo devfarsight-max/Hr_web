@@ -21,7 +21,7 @@ export default function SiteHeader({ active }: { active: string }) {
   return <div className="relative z-50 h-[81px] shrink-0"><header className={`site-header inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur ${isSticky ? 'is-fixed fixed shadow-lg shadow-black/20' : 'relative'}`}>
     <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6">
       <Link href="/" aria-label="Orvanta HR Consultancy home" className="inline-flex shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#16A6A3]">
-        <img src="/orvanta-logo.jpeg" alt="Orvanta HR Consultancy — Empowering People. Enabling Growth." width={425} height={242} className="h-16 w-auto rounded-md object-contain" fetchPriority="high" />
+        <img src="/orvanta-logo.png" alt="Orvanta" width={1662} height={946} className="h-16 w-auto rounded-md object-contain" fetchPriority="high" />
       </Link>
       <nav className="hidden gap-6 text-sm font-medium text-slate-600 lg:flex" aria-label="Main navigation">{navigation.map((item) => <Link className={item.toLowerCase() === active ? 'border-b-2 border-[#16A6A3] pb-1 text-[#0B1F33]' : 'hover:text-[#2457A6]'} href={hrefFor(item)} key={item}>{item}</Link>)}</nav>
       <Link href="/contact" className="hidden rounded-lg bg-[#0B1F33] px-5 py-3 text-sm font-semibold text-white lg:block">Book a Consultation</Link>

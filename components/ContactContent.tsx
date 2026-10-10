@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone } from 'lucide-react';
 
 export default function ContactContent() {
   return (
@@ -13,9 +13,8 @@ export default function ContactContent() {
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div>
           <div className="divide-y divide-white/15 border-y border-white/15">
-            <a href="mailto:hello@talentbridge.co" className="group flex items-center gap-4 py-6"><Mail className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span className="min-w-0"><span className="block text-xs uppercase tracking-widest text-slate-400">Email us</span><span className="mt-2 block break-words text-lg font-semibold group-hover:text-[#61cfcc]">hello@talentbridge.co</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
-            <a href="tel:+912241028890" className="group flex items-center gap-4 py-6"><Phone className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span><span className="block text-xs uppercase tracking-widest text-slate-400">Call us</span><span className="mt-2 block text-lg font-semibold group-hover:text-[#61cfcc]">+91 22 4102 8890</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
-            <div className="flex items-start gap-4 py-6"><MapPin className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><div><span className="block text-xs uppercase tracking-widest text-slate-400">Our location</span><address className="mt-2 text-lg font-semibold not-italic">BKC, Mumbai</address><p className="mt-3 text-sm leading-6">Please contact the team to arrange a meeting and confirm the address before visiting.</p></div></div>
+            <a href="mailto:hrm@orvantahrconsultancy.com" className="group flex items-center gap-4 py-6"><Mail className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span className="min-w-0"><span className="block text-xs uppercase tracking-widest text-slate-400">Email us</span><span className="mt-2 block break-words text-lg font-semibold group-hover:text-[#61cfcc]">hrm@orvantahrconsultancy.com</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
+            <a href="tel:+919205369134" className="group flex items-center gap-4 py-6"><Phone className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span><span className="block text-xs uppercase tracking-widest text-slate-400">Call us</span><span className="mt-2 block text-lg font-semibold group-hover:text-[#61cfcc]">+91 9205369134</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
           </div>
           <div className="mt-9">
             <h2 className="text-2xl">What would you like to discuss?</h2>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone } from 'lucide-react';
 
 const pages = [
   ['Home', '/'], ['About us', '/about'], ['Industries', '/industries'],
@@ -48,9 +48,8 @@ export default function SiteFooter() {
           <div>
             <h3 className="mb-5 text-sm font-semibold text-[#062a4e]">Let&apos;s connect</h3>
             <address className="space-y-5 text-sm not-italic">
-              <a href="mailto:hello@talentbridge.co" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Mail size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span className="break-all">hello@talentbridge.co</span></a>
-              <a href="tel:+912241028890" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Phone size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span>+91 22 4102 8890</span></a>
-              <span className="flex items-start gap-3 py-1"><MapPin size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span>BKC, Mumbai</span></span>
+              <a href="mailto:hrm@orvantahrconsultancy.com" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Mail size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span className="break-all">hrm@orvantahrconsultancy.com</span></a>
+              <a href="tel:+919205369134" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Phone size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span>+91 9205369134</span></a>
             </address>
             <p className="mt-5 text-xs leading-6 text-[#496575]">Contact our team to arrange a conversation or meeting.</p>
           </div>

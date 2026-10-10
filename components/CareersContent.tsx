@@ -73,8 +73,8 @@ export default function CareersContent() {
           <p className="eyebrow">INTRODUCE YOURSELF</p>
           <h2 className="max-w-xl">Tell us what you want to do next.</h2>
           <p className="mt-6 max-w-xl leading-8">Email a short introduction with your area of expertise, the kind of role you are considering and your preferred location. You can attach your CV in your email app.</p>
-          <a href="mailto:hello@talentbridge.co?subject=Career%20enquiry" className="btn mt-7 bg-[#2457A6] text-white"><Mail size={18} aria-hidden="true" />Email your career enquiry</a>
-          <p className="mt-4 text-sm">hello@talentbridge.co</p>
+          <a href="mailto:hrm@orvantahrconsultancy.com?subject=Career%20enquiry" className="btn mt-7 bg-[#2457A6] text-white"><Mail size={18} aria-hidden="true" />Email your career enquiry</a>
+          <p className="mt-4 text-sm">hrm@orvantahrconsultancy.com</p>
         </div>
         <div className="border-t border-[#61cfcc]/40 pt-6 lg:border-l lg:border-t-0 lg:pl-8">
           <h3>Exploring where your skills could fit?</h3>

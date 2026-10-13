@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CONSULTATION_FORM_URL } from '../lib/consultation';
 import { ArrowRight, Search, Users, BriefcaseBusiness, GraduationCap, HeartHandshake, Target, Check } from 'lucide-react';
 import { Reveal } from './Reveal';
 
@@ -65,7 +66,7 @@ export default function ServicesContent() {
             <nav aria-label="Service directory" className="mt-6 flex flex-col gap-4">
               {services.map(({ title }, index) => <a key={title} href={`#service-${index}`} className="flex gap-3 text-sm leading-6 text-slate-300 transition hover:text-[#61cfcc]"><span className="text-[#61cfcc]">0{index + 1}</span>{title}</a>)}
             </nav>
-            <Link href="/contact" className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#61cfcc]">Help me choose <ArrowRight size={16} aria-hidden="true" /></Link>
+            <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#61cfcc]">Help me choose <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
         </aside>
         <div>
@@ -85,7 +86,7 @@ export default function ServicesContent() {
                     <ul className="mt-4 space-y-3">{items.map(item => <li key={item} className="flex gap-3 text-sm leading-6 text-slate-300"><Check size={16} className="mt-1 shrink-0 text-[#61cfcc]" aria-hidden="true" />{item}</li>)}</ul>
                   </div>
                 </div>
-                <Link href="/contact" className="mt-8 inline-flex items-center gap-3 border-b border-[#61cfcc]/40 pb-2 text-sm font-semibold text-[#61cfcc]">Discuss {title.toLowerCase()} <ArrowRight size={17} aria-hidden="true" /></Link>
+                <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 border-b border-[#61cfcc]/40 pb-2 text-sm font-semibold text-[#61cfcc]">Discuss {title.toLowerCase()} <ArrowRight size={17} aria-hidden="true" /></Link>
               </Reveal>
             </div>
           ))}
@@ -98,7 +99,7 @@ export default function ServicesContent() {
             <p className="eyebrow">SHAPE YOUR BRIEF</p>
             <h2 className="max-w-md">Start with the challenge.</h2>
             <p className="mt-5 max-w-md leading-7">You do not need a finished plan. Tell us what needs to change, and we can explore the right scope together.</p>
-            <Link href="/contact" className="btn mt-7 bg-[#2457A6] text-white">Bring us your brief <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn mt-7 bg-[#2457A6] text-white">Bring us your brief <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
           <div className="divide-y divide-white/15">
             {[

@@ -68,7 +68,7 @@ export default function InsightsContent() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-14 lg:pt-20">
-        <div className="flex items-center justify-between gap-5 border-y border-white/20 py-4"><p className="eyebrow mb-0">TALENTBRIDGE / INSIGHTS</p><BookOpen size={20} className="text-[#61cfcc]" aria-hidden="true" /></div>
+        <div className="flex items-center justify-between gap-5 border-y border-white/20 py-4"><p className="eyebrow mb-0">ORVANTA / INSIGHTS</p><BookOpen size={20} className="text-[#61cfcc]" aria-hidden="true" /></div>
         <div className="mt-9 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <h1 className="text-6xl font-bold leading-none tracking-[-.055em] sm:text-8xl">People at work.</h1>
           <p className="max-w-md text-lg leading-8">Practical ideas for the hiring decisions, team conversations and leadership challenges in front of you.</p>

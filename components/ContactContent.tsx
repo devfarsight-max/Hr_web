@@ -1,20 +1,21 @@
+import { CONSULTATION_FORM_URL } from '../lib/consultation';
 import Link from 'next/link';
-import { ArrowUpRight, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 
 export default function ContactContent() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-10 pt-16 lg:pt-20">
-        <p className="eyebrow">CONTACT TALENTBRIDGE</p>
+        <p className="eyebrow">CONTACT ORVANTA</p>
         <h1 className="mt-5 text-5xl font-bold leading-[1.06] tracking-[-.045em] sm:text-6xl">Let&apos;s start a conversation.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-8">A hiring brief, a people challenge or a career move. Tell us what brings you here, and help us understand the support you are looking for.</p>
+        <a href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn mt-8 bg-[#087f7c] text-white">Book a Consultation <ArrowUpRight size={18} aria-hidden="true" /></a>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div>
           <div className="divide-y divide-white/15 border-y border-white/15">
             <a href="mailto:hrm@orvantahrconsultancy.com" className="group flex items-center gap-4 py-6"><Mail className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span className="min-w-0"><span className="block text-xs uppercase tracking-widest text-slate-400">Email us</span><span className="mt-2 block break-words text-lg font-semibold group-hover:text-[#61cfcc]">hrm@orvantahrconsultancy.com</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
-            <a href="tel:+919205369134" className="group flex items-center gap-4 py-6"><Phone className="shrink-0 text-[#61cfcc]" size={23} aria-hidden="true" /><span><span className="block text-xs uppercase tracking-widest text-slate-400">Call us</span><span className="mt-2 block text-lg font-semibold group-hover:text-[#61cfcc]">+91 9205369134</span></span><ArrowUpRight className="ml-auto shrink-0 text-[#61cfcc]" size={18} aria-hidden="true" /></a>
           </div>
           <div className="mt-9">
             <h2 className="text-2xl">What would you like to discuss?</h2>

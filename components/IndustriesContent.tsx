@@ -1,4 +1,5 @@
 'use client';
+import { CONSULTATION_FORM_URL } from '../lib/consultation';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -113,7 +114,7 @@ export default function IndustriesContent() {
               <ul className="mt-5 divide-y divide-white/10">{sector.roles.map(role => <li key={role} className="flex items-center gap-3 py-3 text-sm text-slate-200"><span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#61cfcc]" />{role}</li>)}</ul>
               <h3 className="mt-8 text-base">Where we can help</h3>
               <p className="mt-3 leading-7">{sector.support}</p>
-              <Link href="/contact" className="mt-7 inline-flex items-center gap-2 font-semibold text-[#61cfcc]">Discuss your {sector.name.toLowerCase()} team <ArrowRight size={18} className="shrink-0" aria-hidden="true" /></Link>
+              <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-2 font-semibold text-[#61cfcc]">Discuss your {sector.name.toLowerCase()} team <ArrowRight size={18} className="shrink-0" aria-hidden="true" /></Link>
             </div>
           </div>
         </div>
@@ -133,7 +134,7 @@ export default function IndustriesContent() {
         </div>
         <div className="mt-8 flex flex-col gap-4 border-l-2 border-[#61cfcc] pl-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-2xl leading-7">Work across sectors or do not see yours here? Tell us about your business model and the capabilities you need. We can explore the fit together.</p>
-          <Link href="/contact" className="inline-flex shrink-0 items-center gap-2 font-semibold text-[#61cfcc]">Talk about your industry <ArrowRight size={17} aria-hidden="true" /></Link>
+          <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center gap-2 font-semibold text-[#61cfcc]">Talk about your industry <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
       </section>
     </>

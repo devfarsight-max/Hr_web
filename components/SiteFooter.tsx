@@ -1,5 +1,6 @@
+import { CONSULTATION_FORM_URL } from '../lib/consultation';
 import Link from 'next/link';
-import { ArrowUpRight, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 
 const pages = [
   ['Home', '/'], ['About us', '/about'], ['Industries', '/industries'],
@@ -21,7 +22,7 @@ export default function SiteFooter() {
             <h2 className="mt-3 text-2xl tracking-tight text-[#062a4e] sm:text-3xl">Build your team. Shape your future.</h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="/contact" className="inline-flex items-center gap-3 rounded-lg bg-[#087f7c] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#066663] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087f7c]">Hire with us <ArrowUpRight size={17} aria-hidden="true" /></Link>
+            <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-lg bg-[#087f7c] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#066663] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087f7c]">Hire with us <ArrowUpRight size={17} aria-hidden="true" /></Link>
             <Link href="/careers" className={`inline-flex items-center gap-3 rounded-lg border border-[#062a4e]/20 px-5 py-3 text-sm font-semibold text-[#062a4e] ${linkStyle}`}>Explore careers <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
         </div>
@@ -49,14 +50,13 @@ export default function SiteFooter() {
             <h3 className="mb-5 text-sm font-semibold text-[#062a4e]">Let&apos;s connect</h3>
             <address className="space-y-5 text-sm not-italic">
               <a href="mailto:hrm@orvantahrconsultancy.com" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Mail size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span className="break-all">hrm@orvantahrconsultancy.com</span></a>
-              <a href="tel:+919205369134" className={`flex items-start gap-3 py-1 ${linkStyle}`}><Phone size={18} className="shrink-0 text-[#087f7c]" aria-hidden="true" /><span>+91 9205369134</span></a>
             </address>
             <p className="mt-5 text-xs leading-6 text-[#496575]">Contact our team to arrange a conversation or meeting.</p>
           </div>
         </div>
 
         <div className="flex flex-col justify-between gap-3 border-t border-[#062a4e]/10 py-6 text-xs leading-6 text-[#496575] sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} TalentBridge Consulting. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Orvanta HR Consultancy. All rights reserved.</p>
           <span>People. Potential. Progress.</span>
         </div>
       </div>

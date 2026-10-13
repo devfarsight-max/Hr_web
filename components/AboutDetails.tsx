@@ -1,3 +1,4 @@
+import { CONSULTATION_FORM_URL } from '../lib/consultation';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
@@ -95,7 +96,7 @@ export default function AboutDetails() {
           <p className="eyebrow text-[#61cfcc]">LET&apos;S START WITH YOUR GOALS</p>
           <h2 className="max-w-3xl text-white">What is your next people challenge?</h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Tell us what you are working towards. Together, we can explore the talent, leadership and HR support that fits your next stage.</p>
-          <Link href="/contact" className="btn mt-8 bg-white text-[#0B1F33]">Talk to our team <ArrowRight size={18} aria-hidden="true" /></Link>
+          <Link href={CONSULTATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn mt-8 bg-white text-[#0B1F33]">Talk to our team <ArrowRight size={18} aria-hidden="true" /></Link>
         </Reveal>
       </section>
     </>
